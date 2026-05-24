@@ -3,11 +3,11 @@ The general idea was to create a simple framework that could be used to build an
 
 The code ended up being structured into a few main parts:
 
-- **core/** – core objects with the following hierarchy : `TimeSeries` -> `Asset` -> `Universe`
-- **index/** – logic related to index construction (weighting & rebalancing)
-- **analytics/** – basic performance metrics
-- **data/** – placeholder for loading market data, currently it is possible to import data from csv / dataframe
-- **simulation/** – basic logic for transaction costs, here I tried to replicate the Almgren-Chriss square-root market impact model
+- **core/** - core objects with the following hierarchy : `TimeSeries` -> `Asset` -> `Universe`
+- **index/** - logic related to index construction (weighting & rebalancing)
+- **analytics/** - basic performance metrics
+- **data/** - placeholder for loading market data, currently it is possible to import data from csv / dataframe
+- **simulation/** - basic logic for transaction costs, here I tried to replicate the Almgren-Chriss square-root market impact model
 
 The idea behind this structure was to make it relatively easy to plug different pieces together. For example, it is possible to change the weighting method, the rebalancing rule, or the asset universe without having to rewrite everything.
 This project was mostly an experiment and is still incomplet, some parts are left unfinished and the framework was never connected to a real data workflow. I also wanted to add more strategies. Docstring made with auto docstring extension
